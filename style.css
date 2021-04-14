@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,600;1,300;1,900&display=swap');
+
+*{
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Source Serif Pro', serif;
+    scroll-behavior: smooth;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+    background: #ceced4;
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    transform: translateY(-50%);
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background:#2dda2d;
+    transition: 1s;
+}
+  
+section.acive::before{
+    background:#f31db3;
+    box-shadow: 0 0 0 1200px rgb(230, 21, 49);
+}
+
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+}
+
+header .logo{
+    font-size: 1.5rem;
+    color: aliceblue;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+header .toggle{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: url(menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    cursor: pointer;
+}
+
+header .toggle.active{
+    background: url(close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    cursor: pointer;
+
+}
+
+.me{
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    right: 150px;
+    max-width: 400px;
+}
